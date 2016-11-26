@@ -15,7 +15,7 @@ namespace Console_Analyze.Analyze
         static readonly string url_format =
             "https://api.projectoxford.ai/luis/v2.0/apps/17ddee34-fad7-4448-bd72-0344fb2a14ef?subscription-key=b935c555d7cb4dc7b7be132c0425afef&verbose=true&q={0}";
 
-        public async static Task query(string query_string)
+        public async static Task<result_class> query(string query_string)
         {
             var http = new HttpClient();
             var response = await http.GetAsync(string.Format(url_format, query_string));
@@ -23,7 +23,9 @@ namespace Console_Analyze.Analyze
             var serializer = new DataContractJsonSerializer(typeof(result_class));
 
             var memstream = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var data = (result_class)serializer.ReadObject(memstream);
 
+            return data;
         }
     }
 
