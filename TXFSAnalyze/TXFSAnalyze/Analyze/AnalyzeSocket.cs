@@ -10,7 +10,7 @@ using System.IO;
 
 namespace TXFSAnalyze.Analyze
 {
-    class AnalyzeSocket
+    public class AnalyzeSocket
     {
         static readonly string url_format =
             "https://api.projectoxford.ai/luis/v2.0/apps/17ddee34-fad7-4448-bd72-0344fb2a14ef?subscription-key=b935c555d7cb4dc7b7be132c0425afef&verbose=true&q={0}";

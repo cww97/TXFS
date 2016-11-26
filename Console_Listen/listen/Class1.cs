@@ -7,10 +7,11 @@
     using System.IO;
     using System.Runtime.CompilerServices;
     using System.Windows;
+    using System.Threading;
     public class Listen
     {
         private string subscriptionKey = "68aca18d6fad41ae8f3ed8a633652f17";
-        public string result = "";
+        public static string result = "";
         /// <summary>
         /// The data recognition client
         /// </summary>
@@ -29,6 +30,7 @@
             Listen x = new Listen();
             x.Initialize();
             x.StartButton_Click(new Object(), new RoutedEventArgs());
+            while (result.Equals("")) ;
             return result;
         }
         /// <summary>
