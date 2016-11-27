@@ -1,6 +1,6 @@
 #谈笑风生
 ###FrogJump
-
+![](http://img4.imgtn.bdimg.com/it/u=2380264299,3105874973&fm=23&gp=0.jpg)
 2016 penta Hackson
 队伍12：谈笑风生
 
